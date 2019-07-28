@@ -8,3 +8,7 @@
     height: 100vh;
     font-family: 'Montserrat', sans-serif !important;
 }
+.mdi-human-greeting::before {
+    color : #189A69;
+    font-size: 28px
+}

@@ -3,23 +3,35 @@ import Button from './components/button';
 import Toast from './components/toast';
 import './css/index.css';
 import Header from './components/homeHeader';
+import { getInfluencers } from './services/influencerService';
 class App extends Component {
   state = {  
-    toastDisplay: false
+    toastDisplay: false,
+    influencers: getInfluencers(),
+    currentInfluencer: 0
   };
 
-  handleClick = val => {
-    this.setState( { toastDisplay: true});
+  displayToast = val => {
+    this.setState( { toastDisplay: true, currentInfluencer: this.getInfluencerToDisplay()});
   }
 
+  getInfluencerToDisplay = () => {
+    const inflencersCount = this.state.influencers.length; 
+    return Math.floor(Math.random() * inflencersCount);
+  }
+
+
   render() { 
+    const { toastDisplay, influencers, currentInfluencer } = this.state;
     return ( 
       <div className = 'container-fluid'>
         <Header 
-          onclick = { this.handleClick }
+          onclick = { this.displayToast }
         />        
         <Toast 
-          displayToast = { this.state.toastDisplay }
+          displayToast = { toastDisplay }
+          influencers = { influencers }
+          currentInfluencer = { currentInfluencer }
         />
       </div>
      );
