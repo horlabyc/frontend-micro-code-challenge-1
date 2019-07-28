@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.container-fluid {
+    background-image: url('../assets/images/Group.png');
+    background-position: center;
+    background-size: contain;
+    background-color: #F8F8F8;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif !important;
+}
