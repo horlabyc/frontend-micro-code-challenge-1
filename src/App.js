@@ -35,7 +35,7 @@ handleDelete = fullName => {
 }
 
   render() { 
-    const { toastDisplay, influencers, currentInfluencer, influencersToDisplay } = this.state;
+    const { toastDisplay, currentInfluencer, influencersToDisplay } = this.state;
     return ( 
       <div className = 'container-fluid'>
         <Header 
