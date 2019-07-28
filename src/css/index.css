@@ -12,3 +12,10 @@
     color : #189A69;
     font-size: 28px
 }
+.mdi-close::before {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}

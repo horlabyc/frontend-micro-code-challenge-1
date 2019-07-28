@@ -11,7 +11,7 @@ class App extends Component {
     influencersToDisplay: []
   };
 
-  displayToast = val => {
+  displayToast = () => {
     const { influencers, currentInfluencer} = this.state;
     this.setState( { toastDisplay: true, currentInfluencer: this.getInfluencerToDisplay()});
     this.populateInfluencers(influencers[currentInfluencer]);
@@ -29,6 +29,10 @@ class App extends Component {
     this.setState( { influencersToDisplay: influencers });
 }
 
+handleDelete = fullName => {
+  const influencersToDisplay = this.state.influencersToDisplay.filter(I => I.fullName !== fullName);
+  this.setState( { influencersToDisplay })
+}
 
   render() { 
     const { toastDisplay, influencers, currentInfluencer, influencersToDisplay } = this.state;
@@ -41,6 +45,7 @@ class App extends Component {
           displayToast = { toastDisplay }
           influencers = { influencersToDisplay }
           currentInfluencer = { currentInfluencer }
+          onDelete = { this.handleDelete }
         />
       </div>
      );

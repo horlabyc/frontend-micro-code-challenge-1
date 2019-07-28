@@ -13,7 +13,7 @@ const influencers = [
         "refName": "Code Guy Referrer"
     },
     {  "igFollow": "5k-20k",
-    "igID": "@testInfluencer",
+    "igID": "@testInfluencer1",
     "fbID": "CodeChallengeGuy",
     "fbFollow": "0-5k",
     "ytFollow": "0-5k",
@@ -26,7 +26,7 @@ const influencers = [
     "refName": "Code Guy Referrer"
 },
 {  "igFollow": "5k-20k",
-"igID": "@testInfluencer",
+"igID": "@testInfluencer0",
 "fbID": "CodeChallengeGuy",
 "fbFollow": "0-5k",
 "ytFollow": "0-5k",
@@ -39,7 +39,7 @@ const influencers = [
 "refName": "Code Guy Referrer"
 },
 {  "igFollow": "5k-20k",
-"igID": "@testInfluencer",
+"igID": "@testInfluencer2",
 "fbID": "CodeChallengeGuy",
 "fbFollow": "0-5k",
 "ytFollow": "0-5k",

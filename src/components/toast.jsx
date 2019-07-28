@@ -7,17 +7,18 @@ class Toast extends Component {
     }
 
     render() { 
-        const { displayToast, influencers, currentInfluencer } = this.props;
+        const { displayToast, influencers } = this.props;
         if (displayToast) 
         return (
             <React.Fragment>
                 <div className="row">
                   { influencers.map( influencer => 
-                        <div className="col-md-6">
+                        <div className="col-md-6" key = {influencer.igID || influencer.fbID}>
                             <div className = 'cards' style={{ 'marginTop': '20px'}}>
                                 <div className= 'cardsBody' >
                                     <div className="list d-flex align-items-center border-bottom py-3">
                                         <i className="mdi mdi-human-greeting mr-1"></i>
+                                        <i className="mdi mdi-close mr-1" onClick = { () => this.props.onDelete(influencer.fullName)}></i>
                                             <div className="wrapper w-100 ml-3">
                                                 <p className="mb-0"><b></b> { influencer.fullName }</p>
                                                 <div className="d-flex justify-content-between align-items-center">
